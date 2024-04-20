@@ -1,14 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "./Header";
 import Body from "./Body";
 import BackDrop from "../components/BackDrop";
 
 const Main = () => {
+  const [showCart, setShowCart] = useState(false);
+
+  const showCartHandler = () => {
+    setShowCart(true);
+  };
+  const hideCartHandler = () => {
+    setShowCart(false);
+  };
+
   return (
     <section className="main">
-      <Header />
+      <Header showCartHandler={showCartHandler} />
       <Body />
-      <BackDrop />
+      <BackDrop showCart={showCart} hideCartHandler={hideCartHandler} />
     </section>
   );
 };

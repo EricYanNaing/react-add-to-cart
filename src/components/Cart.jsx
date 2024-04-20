@@ -25,7 +25,7 @@ const frutis = [
   },
 ];
 
-const Cart = () => {
+const Cart = (props) => {
   return (
     <section className="cart-box">
       <h2>Carts</h2>
@@ -38,7 +38,9 @@ const Cart = () => {
         <p>$ 400.00</p>
       </div>
       <div className="btns">
-        <button className="close-btn">Close</button>
+        <button className="close-btn" onClick={props.hideCartHandler}>
+          Close
+        </button>
         <button className="order-btn">Go To Order</button>
       </div>
     </section>

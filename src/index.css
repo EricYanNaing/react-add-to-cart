@@ -127,3 +127,26 @@ body {
   font-weight: 600;
   background-color: transparent;
 }
+.cart-quantity {
+  padding: 4px 6px;
+  background-color: orange;
+  text-align: center;
+  font-weight: 500;
+  color: #fff;
+  border-radius: 10px;
+}
+button:hover {
+  cursor: pointer;
+}
+.quantity-btn {
+  border: 1px solid orange;
+  background-color: transparent;
+  color: orange;
+  border-radius: 6px;
+  margin: 10px;
+  font-size: 18px;
+  font-weight: 900;
+}
+.m-ctr {
+  margin-right: 8px;
+}
