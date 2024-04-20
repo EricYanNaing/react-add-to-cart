@@ -1,12 +1,12 @@
 import Main from "./layout/Main.jsx";
-import itemContextProvider from "./store/ItemContest.jsx";
+import ItemContextProvider from "./store/ItemContest.jsx";
 
 function App() {
   return (
     <div className="App">
-      <itemContextProvider>
+      <ItemContextProvider>
         <Main />
-      </itemContextProvider>
+      </ItemContextProvider>
     </div>
   );
 }

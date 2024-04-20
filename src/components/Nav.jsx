@@ -10,7 +10,7 @@ const Nav = (props) => {
     <nav className="nav">
       <h2>Shoppy</h2>
       <button onClick={props.showCartHandler}>
-        Cart <span>{totalCart}</span>
+        Cart <span>({totalCart})</span>
       </button>
     </nav>
   );
