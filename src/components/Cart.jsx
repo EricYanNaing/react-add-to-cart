@@ -5,23 +5,26 @@ import { itemContext } from "../store/ItemContest";
 
 const Cart = (props) => {
   const { items, totalAmount } = useContext(itemContext);
+  const totalPrice = `$${totalAmount.toFixed(2)}`;
   return (
     <section className="cart-box">
       <h2>Your Cart Items are here!</h2>
-      {items.length < 1 ? (
-        <h1>No Items !!!</h1>
-      ) : (
-        <>
-          {items.map((fruit) => (
-            <CartItem fruit={fruit} key={fruit.id} />
-          ))}
-        </>
-      )}
+      <section className="overflow-ctr">
+        {items.length < 1 ? (
+          <h1>No Items !!!</h1>
+        ) : (
+          <>
+            {items.map((fruit) => (
+              <CartItem fruit={fruit} key={fruit.id} />
+            ))}
+          </>
+        )}
+      </section>
 
       <hr />
       <div className="total">
         <h1>Total Price</h1>
-        <p>$ {totalAmount}</p>
+        <p>{totalPrice}</p>
       </div>
       <div className="btns">
         <button className="close-btn" onClick={props.hideCartHandler}>
